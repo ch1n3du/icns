@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "icns_backend": {
+      "main": "src/icns_backend/main.mo",
+      "type": "motoko"
+    },
+    "icns_frontend": {
+      "dependencies": [
+        "icns_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icns_frontend/src/index.html"
+      },
+      "source": [
+        "src/icns_frontend/assets",
+        "dist/icns_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
